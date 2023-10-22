@@ -4,6 +4,9 @@
 
 <EditForm Model="_model" OnValidSubmit="@HandleSubmitAsync">
 
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+
     <div class="mb-3">
         <label for="Title" class="form-label">Title</label>
         <InputText class="form-control" type="text" id="Title" @bind-Value="_model.Title"/>
@@ -22,6 +25,8 @@
         </InputSelect>
     </div>
 
+    <button class="btn btn-success" type="submit">SAVE</button>
+
 
 </EditForm>
 
@@ -30,11 +35,11 @@
 
     List<Models.Category> _categories = new();
 
-        protected override Task OnInitializedAsync()
-        {
-            @* return base.OnInitializedAsync(); *@
-            @* Inserindo manual as listas de categories *@
-        }
+       // @* protected override Task OnInitializedAsync()
+       // {
+       //     @* return base.OnInitializedAsync(); *@
+       //     @* Inserindo manual as listas de categories *@
+       // }
 
         async Task HandleSubmitAsync()
     {

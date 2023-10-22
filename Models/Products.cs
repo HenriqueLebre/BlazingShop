@@ -19,7 +19,6 @@ public class Product
     public decimal Price { get; set; }
 
     [Required(ErrorMessage = "Categoria é obrigatória")]
-    [Range(1, 9999, ErrorMessage = "Categoria deve estar entre 1 e 9999")]
     public int CategoryId { get; set; }
 
     // public Category Category { get; set; } = null!;
